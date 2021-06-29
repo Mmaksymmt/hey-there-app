@@ -4,7 +4,7 @@ import 'package:hey_there_app/bloc/colors/ColorsBloc.dart';
 import 'package:hey_there_app/bloc/colors/ColorsState.dart';
 
 class HistoryPage extends StatefulWidget {
-  static const ROUTE_NAME = "/history";
+  static const ROUTE_NAME = '/history';
 
   @override
   State<StatefulWidget> createState() => _HistoryPageState();
@@ -16,7 +16,7 @@ class _HistoryPageState extends State<HistoryPage> {
     return Scaffold(
       body: _buildBodyWidget(),
       appBar: AppBar(
-        title: Text("Colors history"),
+        title: Text('Colors history'),
       ),
     );
   }
@@ -29,12 +29,12 @@ class _HistoryPageState extends State<HistoryPage> {
           children: [
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                child: Text("Current color",
+                child: Text('Current color',
                     style: Theme.of(context).textTheme.subtitle1)),
             _buildColorTile(state.color),
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                child: Text("History",
+                child: Text('History',
                     style: Theme.of(context).textTheme.subtitle1)),
             Expanded(
                 child: ListView.builder(

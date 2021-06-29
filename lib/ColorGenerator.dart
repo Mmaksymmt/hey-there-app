@@ -6,7 +6,7 @@ class ColorGenerator {
     Random random = Random();
 
     int randomChannelValue() {
-      const int MAX_CHANNEL_VALUE = 255;
+      const int MAX_CHANNEL_VALUE = 256;
       return random.nextInt(MAX_CHANNEL_VALUE);
     }
 

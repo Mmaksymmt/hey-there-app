@@ -6,7 +6,7 @@ import 'package:hey_there_app/bloc/colors/ColorsEvent.dart';
 import 'package:hey_there_app/bloc/colors/ColorsState.dart';
 
 class MainPage extends StatefulWidget {
-  static const ROUTE_NAME = "/";
+  static const ROUTE_NAME = '/';
 
   MainPage({Key? key}) : super(key: key);
 
@@ -37,7 +37,7 @@ class _MainPageState extends State<MainPage> {
               color: state.color,
               child: Center(
                   child: Center(
-                      child: Text("Hey there",
+                      child: Text('Hey there',
                           style: Theme.of(context).textTheme.headline5))),
             ),
             onTap: _onAnywherePressed);
