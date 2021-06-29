@@ -6,6 +6,7 @@ import 'ColorsEvent.dart';
 import 'ColorsState.dart';
 
 class ColorsBloc extends Bloc<ColorsEvent, ColorsState> {
+  static const int MAX_HISTORY_LENGTH = 30;
   static const Color DEFAULT_COLOR = Colors.white;
 
   final List<Color> _colorsHistory = [];
@@ -23,7 +24,10 @@ class ColorsBloc extends Bloc<ColorsEvent, ColorsState> {
   }
 
   Stream<ColorsState> _onChangedColor() async* {
-    _colorsHistory.add(_currentColor);
+    _colorsHistory.insert(0, _currentColor);
+    if (_colorsHistory.length > MAX_HISTORY_LENGTH) {
+      _colorsHistory.length = MAX_HISTORY_LENGTH;
+    }
     _currentColor = ColorGenerator.generateRandomColor();
     yield ColorsState(_colorsHistory, _currentColor);
   }

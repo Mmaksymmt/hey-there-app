@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hey_there_app/views/HistoryPage.dart';
 import 'package:hey_there_app/bloc/colors/ColorsBloc.dart';
 import 'package:hey_there_app/bloc/colors/ColorsEvent.dart';
 import 'package:hey_there_app/bloc/colors/ColorsState.dart';
 
 class MainPage extends StatefulWidget {
+  static const ROUTE_NAME = "/";
+
   MainPage({Key? key}) : super(key: key);
 
   @override
@@ -21,7 +24,7 @@ class _MainPageState extends State<MainPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _onFloatingActionButtonPressed,
         tooltip: 'Show history',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.history),
       ),
     );
   }
@@ -32,7 +35,10 @@ class _MainPageState extends State<MainPage> {
         return GestureDetector(
             child: Container(
               color: state.color,
-              child: Center(child: Center(child: Text("Hey there"))),
+              child: Center(
+                  child: Center(
+                      child: Text("Hey there",
+                          style: Theme.of(context).textTheme.headline5))),
             ),
             onTap: _onAnywherePressed);
       },
@@ -43,5 +49,7 @@ class _MainPageState extends State<MainPage> {
     _colorsBloc.add(ChangedColorEvent());
   }
 
-  void _onFloatingActionButtonPressed() {}
+  void _onFloatingActionButtonPressed() {
+    Navigator.of(context).pushNamed(HistoryPage.ROUTE_NAME);
+  }
 }
