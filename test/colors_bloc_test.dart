@@ -1,9 +1,9 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hey_there_app/bloc/colors/ColorsBloc.dart';
-import 'package:hey_there_app/bloc/colors/ColorsEvent.dart';
-import 'package:hey_there_app/bloc/colors/ColorsState.dart';
+import 'package:hey_there_app/bloc/colors/colors_bloc.dart';
+import 'package:hey_there_app/bloc/colors/colors_event.dart';
+import 'package:hey_there_app/bloc/colors/colors_state.dart';
 
 void main() {
   blocTest('emits state after color changed',

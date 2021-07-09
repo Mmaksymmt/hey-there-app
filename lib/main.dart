@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hey_there_app/views/HistoryPage.dart';
-import 'package:hey_there_app/views/MainPage.dart';
-import 'package:hey_there_app/bloc/colors/ColorsBloc.dart';
+import 'package:hey_there_app/views/history_page.dart';
+import 'package:hey_there_app/views/main_page.dart';
+import 'package:hey_there_app/bloc/colors/colors_bloc.dart';
 
 void main() {
   runApp(MyApp());

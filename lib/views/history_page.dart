@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hey_there_app/bloc/colors/ColorsBloc.dart';
-import 'package:hey_there_app/bloc/colors/ColorsState.dart';
+import 'package:hey_there_app/bloc/colors/colors_bloc.dart';
+import 'package:hey_there_app/bloc/colors/colors_state.dart';
 
 class HistoryPage extends StatefulWidget {
   static const ROUTE_NAME = '/history';
